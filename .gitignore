@@ -1,0 +1,53 @@
+# Ignore Python compiled files
+__pycache__/
+*.py[cod]
+*$py.class
+
+# Ignore environment files
+.env
+*.env
+
+# Ignore virtual environments
+venv/
+ENV/
+env/
+*.venv/
+
+# Ignore Django database
+db.sqlite3
+
+# Ignore Django migrations
+**/migrations/*
+
+# Keep __init__.py in migrations
+!**/migrations/__init__.py
+
+# Ignore static and media files
+static/
+media/
+
+# Ignore logs
+*.log
+logs/
+*.out
+
+# Ignore Docker artifacts
+docker-compose.override.yml
+*.dockerfile
+
+# Ignore IDE files
+.vscode/
+.idea/
+*.iml
+
+# Ignore system files
+.DS_Store
+Thumbs.db
+
+# Ignore coverage and testing files
+.coverage
+htmlcov/
+*.cover
+*.pytest_cache/
+nose2/
+.tox/
