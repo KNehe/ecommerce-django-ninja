@@ -20,6 +20,7 @@ from django.contrib.auth import authenticate
 from decimal import Decimal
 from django.shortcuts import get_object_or_404
 from ninja.pagination import paginate
+from ninja import Redoc
 
 class AuthBearer(HttpBearer):
     def authenticate(self, request, token):
@@ -37,7 +38,11 @@ class AuthBearer(HttpBearer):
             return None
 
 
-api = NinjaAPI(auth=[AuthBearer()], urls_namespace="api_v1")
+api = NinjaAPI(auth=[AuthBearer()], 
+               urls_namespace="api_v1",
+               title="Ecommerce API",
+               description="A very fast API",
+               docs=Redoc())
 auth_router = NinjaAPI(urls_namespace="api_v1_auth")
 
 
